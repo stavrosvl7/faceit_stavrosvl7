@@ -1,4 +1,4 @@
-package com.unipi.stavrosvl7.faceit.Utilities;
+package com.unipi.stavrosvl7.faceit.utilities;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

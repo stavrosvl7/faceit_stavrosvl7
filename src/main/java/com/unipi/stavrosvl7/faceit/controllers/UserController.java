@@ -1,6 +1,6 @@
 package com.unipi.stavrosvl7.faceit.controllers;
 
-import com.unipi.stavrosvl7.faceit.helper.ControllerHelper;
+import com.unipi.stavrosvl7.faceit.helpers.ControllerHelper;
 import com.unipi.stavrosvl7.faceit.models.Country;
 import com.unipi.stavrosvl7.faceit.models.UserDto;
 import com.unipi.stavrosvl7.faceit.repositories.CountryRepository;

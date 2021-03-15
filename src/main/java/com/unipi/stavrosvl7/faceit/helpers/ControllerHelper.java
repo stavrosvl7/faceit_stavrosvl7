@@ -1,4 +1,4 @@
-package com.unipi.stavrosvl7.faceit.helper;
+package com.unipi.stavrosvl7.faceit.helpers;
 
 import com.unipi.stavrosvl7.faceit.models.Country;
 import com.unipi.stavrosvl7.faceit.models.User;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityNotFoundException;
 
-import static com.unipi.stavrosvl7.faceit.Utilities.Utilities.isValidEmailAddress;
+import static com.unipi.stavrosvl7.faceit.utilities.Utilities.isValidEmailAddress;
 
 @Component
 public class ControllerHelper {

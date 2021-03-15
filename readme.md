@@ -34,11 +34,11 @@ Postman installation and usage (swagger is also included)
 
 ## Running the tests
 Available API Paths:
-1) http://localhost:8081/api/users/add
-2) http://localhost:8081/api/users/all
-3) http://localhost:8081/api/users/all/by/country/{countryName}
-4) http://localhost:8081/api/users/modify/{userId}
-5) http://localhost:8081/api/users/remove/{userId}
+1) http://localhost:8081/api/users/add HttpMethod:POST
+2) http://localhost:8081/api/users/all HttpMethod:GET
+3) http://localhost:8081/api/users/all/by/country/{countryName} HttpMethod:GET
+4) http://localhost:8081/api/users/modify/{userId} HttpMethod:PUT
+5) http://localhost:8081/api/users/remove/{userId} HttpMethod:DELETE
 
 After everything is up and running there are two ways that you can test the application.
 1) http://localhost:8081/swagger-ui.html and just try out the APIs

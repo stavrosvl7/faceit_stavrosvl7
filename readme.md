@@ -72,7 +72,7 @@ id,name,code,phone_international_prefix
 Country must be a seperate entity with it's own fields
 In this way database is more organized and optimized.
 I did this because countries are something standard which never changes.
-We should not have just a field of strings in our User entity
+We should better not have a column of strings in our User entity
 ```
 
 ## Built With

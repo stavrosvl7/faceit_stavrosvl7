@@ -77,7 +77,7 @@ public class UserController {
             return ResponseEntity.ok(HttpStatus.CREATED);
         }
 
-        return ResponseEntity.ok(HttpStatus.NOT_ACCEPTABLE);
+        return ResponseEntity.badRequest().body("Invalid Email address");
     }
 
     @DeleteMapping("/users/remove/{userId}")

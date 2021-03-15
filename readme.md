@@ -37,7 +37,7 @@ Available API Paths:
 1) http://localhost:8081/api/users/add HttpMethod:POST (Adding a new user)
 2) http://localhost:8081/api/users/all HttpMethod:GET (Fetching all users)
 3) http://localhost:8081/api/users/all/by/country/{countryName} HttpMethod:GET (Fetching all users for this country name)
-4) http://localhost:8081/api/users/modify/{userId} HttpMethod:PUT (Modifying an existing users)
+4) http://localhost:8081/api/users/modify/{userId} HttpMethod:PUT (Modifying an existing user)
 5) http://localhost:8081/api/users/remove/{userId} HttpMethod:DELETE (Removing an existing user)
 
 After everything is up and running there are two ways that you can test the application.

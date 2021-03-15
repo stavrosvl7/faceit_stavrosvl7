@@ -19,7 +19,8 @@ After installing both successfully and adding environment variables needed you h
     on application.yml with your own credentials.
 5) Copy & paste sql scripts in your database's query tool. You can find them in folder _scripts in this project.
 
-If all of the above are done successfully you should be able to open and run faceit project from intellij as spring boot application without any trouble.
+Ιf all of the above are accomplished successfully you should be able to open faceit project from intellij.
+Clean and install project through maven plugin and then run it as spring boot application.
 
 ### Prerequisites
 

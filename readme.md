@@ -20,7 +20,7 @@ Create a postgresql database and change the following at application.yml with yo
 
 Copy & paste sql scripts in your database's query tool. You can find them in folder _scripts in this project.
 
-Ιf all of the above are accomplished successfully you should be able to open faceit project from intellij.
+Ιf all the above have been accomplished successfully you should be able to open faceit project from intellij.
 Clean and install project through maven plugin and then run it as spring boot application.
 
 ### Prerequisites

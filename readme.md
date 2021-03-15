@@ -84,5 +84,5 @@ We should better not have a column of strings in our User entity
 
 ## Authors
 
-* **Stavros Vlachakis** - *Initial work* - [Stavros Vlachakis](https://github.com/stavrosvl7)
+* **Stavros Vlachakis** - *Personal work* - [Stavros Vlachakis](https://github.com/stavrosvl7)
 

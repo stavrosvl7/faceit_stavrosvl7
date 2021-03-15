@@ -44,15 +44,16 @@ After everything is up and running there are two ways that you can test the appl
 2) through postman send the appropriate requests to http://localhost:8081/api/%API_PATH%
 
 In both ways you can see the results!
-For demonstration purposes , when a new user is added , the consumed event calls another microservice
-which is fetching all users that exist in database and everything is working according to task.
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+For demonstration purposes , when a new user is added , the consumed event calls another microservice
+which is fetching all users that exist in database and everything is working according to task.
+
 
 ```
-Give an example
+This happes when you call http://localhost:8081/api/users/add
+Automatically after this is called http://localhost:8081/api/users/all through event hanlding
 ```
 
 ## Built With
@@ -60,6 +61,7 @@ Give an example
 * [Spring](https://spring.io/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Kafka](https://kafka.apache.org/) - Events and connection between microservices 
+* [Swagger](https://swagger.io/) - API testing and documentation 
 
 ## Authors
 

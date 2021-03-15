@@ -1,0 +1,29 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/faceitDatabase
+    username: postgres
+    password: 6ma7bwaj
+    initialization-mode: always
+    initialize: true
+    schema: classpath:/
+    continue-on-error: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: none
+        show-sql: false
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        event-consumer:
+          destination: data_stream
+          contentType: application/json
+        event-producer:
+          destination: data_stream
+          contentType: application/json

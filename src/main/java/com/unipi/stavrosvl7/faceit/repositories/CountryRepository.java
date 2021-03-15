@@ -10,4 +10,7 @@ public interface CountryRepository extends JpaRepository<Country, Long> {
     @Query(value = "select * from dom_country where id=?1 for update skip locked", nativeQuery = true)
     Optional<Country> findByIdAquireLock(Long countryId);
 
+    @Query(value = "select * from dom_country where LOWER(name)=?1 for update skip locked", nativeQuery = true)
+    Optional<Country> findByName(String countryName);
+
 }

@@ -45,10 +45,10 @@ public class UserController {
         return users;
     }
 
-    @GetMapping("/users/all/by/country/{countryId}")
-    public List<User> getAllByCountryId(@PathVariable(value = "countryId") Long countryId) {
+    @GetMapping("/users/all/by/country/{countryName}")
+    public List<User> getAllByCountryId(@PathVariable(value = "countryName") String countryName) {
 
-        Country country = countryRepository.findById(countryId)
+        Country country = countryRepository.findByName(countryName.toLowerCase())
                 .orElseThrow(() -> new EntityNotFoundException("Country not found"));
 
         List<User> users = userRepository.findAllByCountry(country);

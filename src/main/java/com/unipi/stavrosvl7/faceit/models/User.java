@@ -32,9 +32,6 @@ public class User implements Serializable {
     @JoinColumn(name = "country_id", referencedColumnName = "id")
     private Country country;
 
-    @Column
-    private byte[] bytePayload;
-
     public User() {
     }
 
@@ -103,11 +100,4 @@ public class User implements Serializable {
         this.country = countryId;
     }
 
-    public byte[] getBytePayload() {
-        return bytePayload;
-    }
-
-    public void setBytePayload(byte[] bytePayload) {
-        this.bytePayload = bytePayload;
-    }
 }

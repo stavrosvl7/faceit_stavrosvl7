@@ -23,7 +23,6 @@ public class EventStreamService {
     }
 
     public Boolean produceEvent(User user) {
-        user.setBytePayload(user.getEmail().getBytes());
         MessageChannel messageChannel = eventStream.producer();
         LOGGER.info("Producing event for user with id: {} name: {} email: {}", user.getId() ,user.getFirstName() ,user.getEmail());
         return messageChannel.send(MessageBuilder.withPayload(user)

@@ -19,7 +19,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api")
 public class UserController {
 
     private final UserRepository userRepository;
@@ -35,7 +35,7 @@ public class UserController {
         this.countryRepository = countryRepository;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/users/all")
     public List<User> getUsers() {
 
         List<User> users = userRepository.findAll();
@@ -45,7 +45,7 @@ public class UserController {
         return users;
     }
 
-    @GetMapping("/all/by/country/{countryId}")
+    @GetMapping("/users/all/by/country/{countryId}")
     public List<User> getAllByCountryId(@PathVariable(value = "countryId") Long countryId) {
 
         Country country = countryRepository.findById(countryId)
@@ -59,7 +59,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/add")
+    @PostMapping("/users/add")
     public ResponseEntity addUser(@RequestBody UserDto newUser) {
 
         Country country = countryRepository.findByIdAquireLock(newUser.getCountryId())
@@ -80,7 +80,7 @@ public class UserController {
         return ResponseEntity.ok(HttpStatus.NOT_ACCEPTABLE);
     }
 
-    @DeleteMapping("/remove/{userId}")
+    @DeleteMapping("/users/remove/{userId}")
     public ResponseEntity<?> removeUser(@PathVariable(value = "userId") Long userId) {
 
         User user = userRepository.findByIdAquireLock(userId)
@@ -94,7 +94,7 @@ public class UserController {
 
     }
 
-    @PutMapping("/modify/{userId}")
+    @PutMapping("/users/modify/{userId}")
     public ResponseEntity<?> update(@PathVariable(value = "userId") Long userId, @RequestBody UserDto sourceUser) {
 
         User user = controllerHelper.validateUser(sourceUser);

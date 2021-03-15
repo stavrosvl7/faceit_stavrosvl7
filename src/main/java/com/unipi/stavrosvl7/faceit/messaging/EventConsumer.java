@@ -18,7 +18,7 @@ public class EventConsumer {
 
     @StreamListener(EventStream.INBOUND)
     public void consumeEvent(@Payload User user) {
-        ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:8081/users/all", String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:8081/api/users/all", String.class);
         System.out.println("Event consumed successfully ! A new user has been added with nickname: " + user.getNickName() + " email: "
                 + user.getEmail());
         System.out.println("Microservice response " + response.getBody());

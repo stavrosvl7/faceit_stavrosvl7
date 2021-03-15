@@ -10,15 +10,15 @@ CREATE TABLE dom_country (
 create sequence web_user_id_seq start with 1;
 
 CREATE TABLE web_user (
-	id bigint primary key DEFAULT nextval('web_user_id_seq'),
+    id bigint primary key DEFAULT nextval('web_user_id_seq'),
     first_name text ,
     last_name text ,
     nick_name text ,
     password text not null,
     email text unique not null,
     byte_payload text,
-	country_id bigint not null,
-	CONSTRAINT country_id_fk FOREIGN KEY (country_id) REFERENCES dom_country (id)
+    country_id bigint not null,
+    CONSTRAINT country_id_fk FOREIGN KEY (country_id) REFERENCES dom_country (id)
 );
 
 insert into dom_country values(nextval('dom_country_id_seq'),'Greece','gr','+30');

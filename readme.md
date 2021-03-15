@@ -17,6 +17,7 @@ After installing both successfully and adding environment variables needed you h
      * password: %YOUR_POSTGRESQL_PASSWORD%
 
     on application.yml with your own credentials.
+5) Copy & paste sql scripts in your database's query tool. You can find them in folder _scripts in this project.
 
 If all of the above are done successfully you should be able to open and run faceit project from intellij as spring boot application without any trouble.
 
@@ -25,7 +26,7 @@ If all of the above are done successfully you should be able to open and run fac
 What things you need to install the software and how to install them
 
 ```
-Java installation
+Java installation (https://www.java.com/en/download/manual.jsp)
 Zookeeper and Kafka installation (https://www.youtube.com/watch?v=OJKesEpO6ok&ab_channel=GopalTiwari)
 IntelliJ installation + licence (alternative eclipse J2EE)
 Postman installation and usage (swagger is also included)
@@ -45,7 +46,7 @@ After everything is up and running there are two ways that you can test the appl
 
 In both ways you can see the results!
 
-### Break down into end to end tests
+### Assumptions
 
 For demonstration purposes , when a new user is added , the consumed event calls another microservice
 which is fetching all users that exist in database and everything is working according to task.
@@ -54,6 +55,13 @@ which is fetching all users that exist in database and everything is working acc
 ```
 This happes when you call http://localhost:8081/api/users/add
 Automatically after this is called http://localhost:8081/api/users/all through event hanlding
+```
+
+A new user must have:
+
+```
+Valid and unique email address
+Valid country Id which refers to dom_country table in database
 ```
 
 ## Built With

@@ -77,7 +77,7 @@ public class UserController {
             return ResponseEntity.ok(HttpStatus.CREATED);
         }
 
-        return ResponseEntity.badRequest().body("Invalid Email address");
+        return ResponseEntity.badRequest().body("Not acceptable user fields");
     }
 
     @DeleteMapping("/users/remove/{userId}")
@@ -112,6 +112,6 @@ public class UserController {
             return ResponseEntity.ok(HttpStatus.OK);
         }
 
-        return ResponseEntity.ok("Not acceptable user fields");
+        return ResponseEntity.badRequest().body("Not acceptable user fields");
     }
 }

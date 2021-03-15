@@ -64,6 +64,17 @@ Valid and unique email address
 Valid country Id which refers to dom_country table in database
 ```
 
+I created an entity Country which consists of:
+
+id,name,code,phone_international_prefix
+
+```
+Country must be a seperate entity with it's own fields
+In this way database is more organized and optimized.
+I did this because countries are something standard which never changes.
+We should not have just a field of strings in our User entity
+```
+
 ## Built With
 
 * [Spring](https://spring.io/) - The web framework used

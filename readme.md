@@ -11,13 +11,14 @@ After installing both successfully and adding environment variables needed you h
 1) zkserver
 2) open cmd in kafka installation folder and execute .\bin\windows\kafka-server-start.bat .\config\server.properties
 3) git clone https://github.com/stavrosvl7/faceit_stavrosvl7 in your intelliJ projects folder
-4) create a postgresql database and change
-     * url: jdbc:postgresql://localhost:%YOUR_POSTGRESQL_PORT%/%YOUR_DATABASE_NAME%
-     * username: %YOUR_POSTGRESQL_USERNAME%
-     * password: %YOUR_POSTGRESQL_PASSWORD%
 
-    on application.yml with your own credentials.
-5) Copy & paste sql scripts in your database's query tool. You can find them in folder _scripts in this project.
+Create a postgresql database and change the following at application.yml with your own credentials.
+
+1) url: jdbc:postgresql://localhost:%YOUR_POSTGRESQL_PORT%/%YOUR_DATABASE_NAME%
+2) username: %YOUR_POSTGRESQL_USERNAME%
+3) password: %YOUR_POSTGRESQL_PASSWORD%
+
+Copy & paste sql scripts in your database's query tool. You can find them in folder _scripts in this project.
 
 Ιf all of the above are accomplished successfully you should be able to open faceit project from intellij.
 Clean and install project through maven plugin and then run it as spring boot application.

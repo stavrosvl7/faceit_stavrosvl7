@@ -55,7 +55,7 @@ which is fetching all users that exist in database and everything is working acc
 
 
 ```
-This happes when you call http://localhost:8081/api/users/add
+This happens when you call http://localhost:8081/api/users/add
 Automatically after this is called http://localhost:8081/api/users/all through event hanlding
 ```
 

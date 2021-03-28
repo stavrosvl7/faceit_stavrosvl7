@@ -51,6 +51,8 @@ In both ways you can see the results!
 ### Assumptions
 
 For demonstration purposes , when a new user is added , the consumed event calls another microservice
+by injecting our User controller. In a bigger application we could create separate services for every
+Entity like UserService and microservices could communicate through this service and call each other.
 which is fetching all users that exist in database and everything is working according to task.
 
 
